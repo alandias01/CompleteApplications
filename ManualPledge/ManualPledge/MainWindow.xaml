@@ -1,0 +1,22 @@
+﻿<Window x:Class="ManualPledge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="453" Width="538">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+        <DataGrid  AutoGenerateColumns="True" Grid.Column="0" Name="dataGridPledge"  AllowDrop="True" DragEnter="dataGridPledge_DragEnter" Drop="dataGridPledge_Drop" />
+        <Grid Grid.Column="1">
+            
+        <Button Content="Pledge" Height="76"  Name="buttonPledge" Width="127" Margin="0,6,147,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="buttonPledge_Click" />
+            <CheckBox Content="Send To OCC" IsChecked="True" Height="30" HorizontalAlignment="Left" Margin="139,6,0,0" Name="checkBoxSendToOcc" VerticalAlignment="Top"  />
+            <CheckBox Content="Create Apex Trade" IsChecked="True"  Height="27" HorizontalAlignment="Left" Margin="139,42,0,0" Name="checkBoxCreateApexTrade" VerticalAlignment="Top" />
+            
+            <Grid></Grid>
+        </Grid>
+        
+        
+    </Grid>
+</Window>

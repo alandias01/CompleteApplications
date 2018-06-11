@@ -1,0 +1,10 @@
+open ftp.loanet.com
+5239
+boy2man2di
+cd /5239/test/in
+binary
+prompt n
+
+mput ECI5239
+
+quit

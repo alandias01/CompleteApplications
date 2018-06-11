@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B5DD3F6-5B81-4FF6-979B-729702B322D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maple.Dtc.PositionClient</RootNamespace>
+    <AssemblyName>PositionClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Magnifying-Glass-2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\PnlSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PnlSummaryForm.Designer.cs">
+      <DependentUpon>PnlSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReturnByCtpyActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReturnByCtpyActivityForm.Designer.cs">
+      <DependentUpon>ReturnByCtpyActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\G1HistoricalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\G1HistoricalForm.Designer.cs">
+      <DependentUpon>G1HistoricalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CtpySummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CtpySummaryForm.Designer.cs">
+      <DependentUpon>CtpySummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\G1ActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\G1ActivityForm.Designer.cs">
+      <DependentUpon>G1ActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HedgeCashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HedgeCashForm.Designer.cs">
+      <DependentUpon>HedgeCashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NsccProjectedNeedsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NsccProjectedNeedsForm.Designer.cs">
+      <DependentUpon>NsccProjectedNeedsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OccHedgePositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OccHedgePositionForm.Designer.cs">
+      <DependentUpon>OccHedgePositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\G1PositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\G1PositionForm.Designer.cs">
+      <DependentUpon>G1PositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvestigateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvestigateForm.Designer.cs">
+      <DependentUpon>InvestigateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OccHedgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OccHedgeForm.Designer.cs">
+      <DependentUpon>OccHedgeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PriceControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PriceControlForm.Designer.cs">
+      <DependentUpon>PriceControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonCashItemsFromCurrentPosition.cs" />
+    <Compile Include="PnlObject.cs" />
+    <Compile Include="RealTimePositionCalculator.cs" />
+    <Compile Include="Forms\ReturnActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReturnActivityForm.Designer.cs">
+      <DependentUpon>ReturnActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RecentDtcActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RecentDtcActivityForm.Designer.cs">
+      <DependentUpon>RecentDtcActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DtcActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DtcActivityForm.Designer.cs">
+      <DependentUpon>DtcActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtcChannel.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\PnlSummaryForm.resx">
+      <DependentUpon>PnlSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReturnByCtpyActivityForm.resx">
+      <DependentUpon>ReturnByCtpyActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\G1HistoricalForm.resx">
+      <DependentUpon>G1HistoricalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CtpySummaryForm.resx">
+      <DependentUpon>CtpySummaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\G1ActivityForm.resx">
+      <DependentUpon>G1ActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HedgeCashForm.resx">
+      <DependentUpon>HedgeCashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NsccProjectedNeedsForm.resx">
+      <DependentUpon>NsccProjectedNeedsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OccHedgePositionForm.resx">
+      <DependentUpon>OccHedgePositionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\G1PositionForm.resx">
+      <DependentUpon>G1PositionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvestigateForm.resx">
+      <DependentUpon>InvestigateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OccHedgeForm.resx">
+      <DependentUpon>OccHedgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PriceControlForm.resx">
+      <DependentUpon>PriceControlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReturnActivityForm.resx">
+      <DependentUpon>ReturnActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecentDtcActivityForm.resx">
+      <DependentUpon>RecentDtcActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DtcActivityForm.resx">
+      <DependentUpon>DtcActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecallActivityForm.resx">
+      <DependentUpon>RecallActivityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResearchForm.resx">
+      <DependentUpon>ResearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewPositionForm.resx">
+      <DependentUpon>ViewPositionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Install\Install.bat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\RecallActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RecallActivityForm.Designer.cs">
+      <DependentUpon>RecallActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResearchForm.Designer.cs">
+      <DependentUpon>ResearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewPositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewPositionForm.Designer.cs">
+      <DependentUpon>ViewPositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Magnifying-Glass-2.ico" />
+    <None Include="Install\TestInstall.bat" />
+    <None Include="Resources\Drunk01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Global1\G1BizObjects\trunk\G1BizObjects.csproj">
+      <Project>{C2AFD743-1ADC-4843-97F8-EFD3A998D6EA}</Project>
+      <Name>G1BizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NSCC\NsccBizObjects\trunk\NsccBizObjects.csproj">
+      <Project>{52291E45-6D70-4728-88D4-30414479457F}</Project>
+      <Name>NsccBizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\OCC\OccBizObjects\trunk\OccBizObjects.csproj">
+      <Project>{009EF359-720F-4B47-BD5A-F95EC2584139}</Project>
+      <Name>OccBizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Slate\SlateBizObjects\trunk\SlateBizObjects.csproj">
+      <Project>{755D4C6F-93E8-4F07-B0A1-278539CC877B}</Project>
+      <Name>BizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\MapleUtilities\trunk\MapleUtilities.csproj">
+      <Project>{66224C8A-E34D-4E31-BB3E-B0A7649DAFFE}</Project>
+      <Name>MapleUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DtcBizObjects\trunk\DtcBizObjects.csproj">
+      <Project>{048CCB76-3371-4BE3-8D03-E52996F98E57}</Project>
+      <Name>DtcBizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NewtonDTCBizObjects\NewtonDTCBizObjects\NewtonDTCBizObjects.csproj">
+      <Project>{2A5D5112-32CB-4867-9BA2-74E770107FEB}</Project>
+      <Name>NewtonDTCBizObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EquilendModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EquilendModelStoreContainer">
+          <EntitySet Name="DTCMap" EntityType="EquilendModel.Store.DTCMap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LegalEntityContact" EntityType="EquilendModel.Store.LegalEntityContact" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="DTCMap">
+          <Key>
+            <PropertyRef Name="DTCMapId" />
+          </Key>
+          <Property Name="DTCMapId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DTC" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LegalEntity" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="DateEntered" Type="datetime" />
+          <Property Name="EnteredBy" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LegalEntityContact">
+          <Key>
+            <PropertyRef Name="LegalEntityContactId" />
+          </Key>
+          <Property Name="LegalEntityContactId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DTCMapId" Type="int" />
+          <Property Name="LegalEntity" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Role" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="100" />
+          <Property Name="NumberType" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EquilendModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EquilendEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DTCMaps" EntityType="EquilendModel.DTCMap" />
+          <EntitySet Name="LegalEntityContacts" EntityType="EquilendModel.LegalEntityContact" />
+        </EntityContainer>
+        <EntityType Name="DTCMap">
+          <Key>
+            <PropertyRef Name="DTCMapId" />
+          </Key>
+          <Property Name="DTCMapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DTC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LegalEntity" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="DateEntered" Type="DateTime" />
+          <Property Name="EnteredBy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LegalEntityContact">
+          <Key>
+            <PropertyRef Name="LegalEntityContactId" />
+          </Key>
+          <Property Name="LegalEntityContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DTCMapId" Type="Int32" Nullable="false" />
+          <Property Name="LegalEntity" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Role" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NumberType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EquilendModelStoreContainer" CdmEntityContainer="EquilendEntities">
+          <EntitySetMapping Name="DTCMaps"><EntityTypeMapping TypeName="EquilendModel.DTCMap"><MappingFragment StoreEntitySet="DTCMap">
+            <ScalarProperty Name="DTCMapId" ColumnName="DTCMapId" />
+            <ScalarProperty Name="DTC" ColumnName="DTC" />
+            <ScalarProperty Name="LegalEntity" ColumnName="LegalEntity" />
+            <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+            <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LegalEntityContacts"><EntityTypeMapping TypeName="EquilendModel.LegalEntityContact"><MappingFragment StoreEntitySet="LegalEntityContact">
+            <ScalarProperty Name="LegalEntityContactId" ColumnName="LegalEntityContactId" />
+            <ScalarProperty Name="DTCMapId" ColumnName="DTCMapId" />
+            <ScalarProperty Name="LegalEntity" ColumnName="LegalEntity" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Role" ColumnName="Role" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+            <ScalarProperty Name="NumberType" ColumnName="NumberType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Equilend">
+        <EntityTypeShape EntityType="EquilendModel.DTCMap" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7566536458333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="EquilendModel.LegalEntityContact" Width="1.5" PointX="2.75" PointY="0.75" Height="2.2496956380208335" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

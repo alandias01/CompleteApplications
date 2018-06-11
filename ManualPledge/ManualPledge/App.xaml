@@ -1,0 +1,11 @@
+﻿<Application x:Class="ManualPledge.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="WPFUIStyle01.xaml" />
+        
+        
+        
+    </Application.Resources>
+</Application>
